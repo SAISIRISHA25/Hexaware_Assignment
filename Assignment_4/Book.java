@@ -10,6 +10,6 @@ class Book {
         this.bookId = id;
         this.title = t;
         this.author = a;
-        this.isAvailable = true; // Initially Available
+        this.isAvailable = true; 
     }
 }
