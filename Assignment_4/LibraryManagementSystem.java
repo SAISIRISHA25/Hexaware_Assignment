@@ -20,9 +20,9 @@ public class LibraryManagementSystem {
             System.out.print("Select an option: ");
             
             int choice = sc.nextInt();
-            sc.nextLine(); // Clear buffer for string inputs
+            sc.nextLine(); 
 
-            if (choice == 1) { // Add Book
+            if (choice == 1) { 
                 System.out.print("Enter Book ID: ");
                 int id = sc.nextInt(); sc.nextLine();
                 System.out.print("Enter Full Title: ");
@@ -32,7 +32,7 @@ public class LibraryManagementSystem {
                 books.add(new Book(id, title, author));
                 System.out.println("Success: Book added to inventory.");
 
-            } else if (choice == 2) { // Create Member
+            } else if (choice == 2) { 
                 System.out.print("Enter Member ID: ");
                 int id = sc.nextInt(); sc.nextLine();
                 System.out.print("Enter Member Full Name: ");
@@ -40,7 +40,7 @@ public class LibraryManagementSystem {
                 members.add(new Member(id, name));
                 System.out.println("Success: Member registered.");
 
-            } else if (choice == 3) { // Issue Book Logic
+            } else if (choice == 3) { 
                 System.out.print("Enter Member ID: ");
                 int mid = sc.nextInt();
                 System.out.print("Enter Book ID: ");
@@ -49,7 +49,7 @@ public class LibraryManagementSystem {
                 Member m = null; for(Member x : members) if(x.memberId == mid) m = x;
                 Book b = null; for(Book x : books) if(x.bookId == bid) b = x;
 
-                // Validation: Check existence, availability, and member limit
+                
                 if (m != null && b != null && b.isAvailable && m.issuedBook == null) {
                     m.issuedBook = b;
                     b.isAvailable = false;
@@ -61,7 +61,7 @@ public class LibraryManagementSystem {
                     System.out.println("Error: Check if IDs are correct, book is available, or member already has a book.");
                 }
 
-            } else if (choice == 4) { // Return Book & Fine Logic
+            } else if (choice == 4) { 
                 System.out.print("Enter Member ID returning the book: ");
                 int mid = sc.nextInt();
                 for (Member m : members) {
@@ -80,13 +80,13 @@ public class LibraryManagementSystem {
                     }
                 }
 
-            } else if (choice == 5) { // Show All Books
+            } else if (choice == 5) { 
                 System.out.println("\nID\tTITLE\t\t\tAUTHOR\t\tSTATUS");
                 for (Book b : books) {
                     System.out.println(b.bookId + "\t" + b.title + "\t\t" + b.author + "\t\t" + (b.isAvailable ? "Available" : "Issued"));
                 }
 
-            } else if (choice == 6) { // Update Book
+            } else if (choice == 6) { 
                 System.out.print("Enter Book ID to Update: ");
                 int bid = sc.nextInt(); sc.nextLine();
                 for (Book b : books) {
@@ -97,13 +97,13 @@ public class LibraryManagementSystem {
                     }
                 }
 
-            } else if (choice == 7) { // Remove Book
+            } else if (choice == 7) {
                 System.out.print("Enter Book ID to Remove: ");
                 int bid = sc.nextInt();
                 books.removeIf(b -> b.bookId == bid);
                 System.out.println("Book removed from system.");
 
-            } else if (choice == 8) { // Remove Member
+            } else if (choice == 8) { 
                 System.out.print("Enter Member ID to Remove: ");
                 int mid = sc.nextInt();
                 members.removeIf(m -> m.memberId == mid);
