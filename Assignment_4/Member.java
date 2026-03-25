@@ -5,7 +5,7 @@ import java.time.LocalDate;
 class Member {
     int memberId;
     String name;
-    Book issuedBook = null; // Only one book allowed
+    Book issuedBook = null;
     LocalDate issueDate;
     LocalDate dueDate;
 
