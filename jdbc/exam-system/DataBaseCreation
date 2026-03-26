@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS exam_db;
+USE exam_db;
+
+CREATE TABLE Questions (
+    questionId INT PRIMARY KEY AUTO_INCREMENT,
+    questionText VARCHAR(500) NOT NULL,
+    optionA VARCHAR(100) NOT NULL,
+    optionB VARCHAR(100) NOT NULL,
+    optionC VARCHAR(100) NOT NULL,
+    optionD VARCHAR(100) NOT NULL,
+    correctAnswer CHAR(1) NOT NULL
+);
+
+CREATE TABLE Members (
+    userId INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL
+);
+
