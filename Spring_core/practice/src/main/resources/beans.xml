@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="eng1" class="com.example.practice.Engine">
+    <property name="type" value="V8 Petrol"/>
+    <property name="horsepower" value="450"/>
+</bean>
+
+<bean id="car1" class="com.example.practice.Car">
+    <property name="modelName" value="Ford Mustang"/>
+    <property name="engineObj" ref="eng1"/> </bean>
+    </beans>   

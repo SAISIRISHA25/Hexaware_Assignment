@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       <bean id="emp1" class="com.example.demo.Employee">
+           <property name="id" value="1"/>
+           <property name="name" value="John Doe"/>
+           <property name="department" value="IT"/>
+    </bean>
+
+    <bean id="emp2" class="com.example.demo.Employee">
+        <property name="id" value="2"/>
+        <property name="name" value="Jane Smith"/>
+        <property name="department" value="HR"/>
+    </bean>
+    
+    <bean id="dept1" class="com.example.demo.Department">
+        <property name="id" value="101"/>
+        <property name="name" value="Information Technology"/>
+        <property name="empobj" ref="emp1"/>
+    </bean>
+
+    <bean id="res1" class="com.example.demo.Result">
+    <property name="grade" value="A+"/>
+    <property name="percentage" value="95.5"/>
+</bean>
+
+<bean id="stud1" class="com.example.demo.Student">
+    <property name="rollNo" value="501"/>
+    <property name="name" value="Sai Sirisha"/>
+    <property name="resobj" ref="res1"/> </bean>
+
+    <bean id="author1" class="com.example.demo.Author">
+    <property name="name" value="J.K. Rowling"/>
+    <property name="country" value="UK"/>
+</bean>
+
+<bean id="book1" class="com.example.demo.Book">
+    <property name="title" value="Harry Potter"/>
+    <property name="price" value="599.0"/>
+    <property name="authObj" ref="author1"/> </bean>
+
+</beans>    
