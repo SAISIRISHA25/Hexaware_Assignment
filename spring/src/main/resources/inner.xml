@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dept1" class="com.example.inner.Department">
+        <property name="deptId" value="101"/>
+        <property name="dname" value="Computer Science"/>
+
+        <property name="emp1">
+            <bean class="com.example.inner.Employee">
+                <property name="empId" value="1"/>
+                <property name="name" value="Sai"/>
+            </bean>
+        </property>
+    </bean>
+
+</beans>

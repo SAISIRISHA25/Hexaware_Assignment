@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="studentObj" class="com.example.spring.Student">
+        <property name="name" value="Arti" />
+        <property name="rollno" value="101" />
+
+        <property name="subjects">
+            <list>
+                <value>DBMS</value>
+                <value>OS</value>
+                <value>REACT</value>
+                <value>JAVA SCRIPT</value>
+            </list>
+        </property>
+
+        <property name="hobbies">
+            <set>
+                <value>Reading</value>
+                <value>Coding</value>
+                <value>Traveling</value>
+                <value>Coding</value> </set>
+        </property>
+
+        <!-- <property name="marksAndSubjects">
+            <map>
+                <entry key="DBMS" value="85" />
+                <entry key="OS" value="92" />
+            </map>
+        </property> -->
+
+        <property name="marksAndSubjects">
+    <props>
+        <prop key="DBMS">85</prop>
+        <prop key="OS">90</prop>
+    </props>
+</property>
+
+    </bean>
+
+</beans>
