@@ -1,0 +1,46 @@
+.d1
+{
+    border: 2px solid blue;
+    background-color: rgb(235, 9, 235);
+    width: 320px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.container
+{
+    border: 2px solid blue;
+    width: 350px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: lightpink;
+    border-radius: 10px;
+}
+
+.form-group
+{
+    margin-bottom: 15px;
+}
+
+input, select
+{
+    width: 100%;
+    padding: 8px;
+}
+
+button
+{
+    padding: 10px;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.result
+{
+    margin-top: 20px;
+}
