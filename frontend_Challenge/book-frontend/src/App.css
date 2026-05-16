@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f2f6ff;
+}
+
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+}
+
+.auth-form {
+  margin-top: 25px;
+}
+
+.switch-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dashboard-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+}
+
+.topbar {
+  background: linear-gradient(135deg, #1d4ed8, #4338ca);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  box-shadow: 0 12px 30px rgba(29, 78, 216, 0.25);
+}
+
+.top-title {
+  color: white !important;
+  margin-bottom: 5px !important;
+}
+
+.welcome-text {
+  color: #dbeafe;
+}
+
+.dashboard-card {
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.search-box {
+  max-width: 450px;
+}
+
+.ant-table {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.ant-btn {
+  border-radius: 10px;
+}
+
+.ant-input,
+.ant-input-number,
+.ant-input-affix-wrapper {
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
